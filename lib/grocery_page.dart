@@ -75,7 +75,7 @@ class GgroceryState extends State<Grocery> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: ShoppingList(products: _getProducts()),
+      body: Center(child: ShoppingList(products: _getProducts())),
       floatingActionButton: SpeedDial(
         animatedIcon: AnimatedIcons.menu_close,
         backgroundColor: Theme.of(context).primaryColor,

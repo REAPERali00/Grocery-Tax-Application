@@ -36,33 +36,41 @@ class _HomePageState extends State<HomePage> {
         title: const Text('Grocerry'),
         backgroundColor: Colors.green[300],
       ),
-      body: Column(
-        children: <Widget>[
-          Container(
-            padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
-            decoration: BoxDecoration(
-              color: Colors.green[100],
-              borderRadius: BorderRadius.circular(5),
-            ),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Icon(Icons.attach_money, color: Colors.green[700]),
-                Text(
-                  '${total_Cost.toStringAsFixed(2)}',
-                  style: TextStyle(
-                      fontSize: 24,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.green[700]),
-                ),
-              ],
-            ),
+      body: Container(
+        decoration: const BoxDecoration(
+          image: DecorationImage(
+            image: AssetImage('assets/images/background.png'),
+            fit: BoxFit.cover,
           ),
-          Expanded(child: CostList(items: costs)),
-          NumberInput(
-            add_cost: add_cost,
-          ),
-        ],
+        ),
+        child: Column(
+          children: <Widget>[
+            Container(
+              padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+              decoration: BoxDecoration(
+                color: Colors.green[100],
+                borderRadius: BorderRadius.circular(5),
+              ),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Icon(Icons.attach_money, color: Colors.green[700]),
+                  Text(
+                    '${total_Cost.toStringAsFixed(2)}',
+                    style: TextStyle(
+                        fontSize: 24,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.green[700]),
+                  ),
+                ],
+              ),
+            ),
+            Expanded(child: CostList(items: costs)),
+            NumberInput(
+              add_cost: add_cost,
+            ),
+          ],
+        ),
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: set_taxed,

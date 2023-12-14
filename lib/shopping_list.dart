@@ -20,38 +20,38 @@ class ShoppingListItem extends StatelessWidget {
   final CartChangedCallback onCartChanged;
 
   Color _getColor(BuildContext context) {
-    // The theme depends on the BuildContext because different
-    // parts of the tree can have different themes.
-    // The BuildContext indicates where the build is
-    // taking place and therefore which theme to use.
-
-    return inCart //
-        ? Colors.black54
-        : Theme.of(context).primaryColor;
+    return inCart ? Colors.grey : Theme.of(context).primaryColor;
   }
 
   TextStyle? _getTextStyle(BuildContext context) {
-    if (!inCart) return null;
+    if (!inCart) return const TextStyle(fontSize: 20);
 
     return const TextStyle(
-      color: Colors.black54,
+      color: Colors.grey,
       decoration: TextDecoration.lineThrough,
+      fontSize: 20,
     );
   }
 
   @override
   Widget build(BuildContext context) {
-    return ListTile(
-      onTap: () {
-        onCartChanged(product, inCart);
-      },
-      leading: CircleAvatar(
-        backgroundColor: _getColor(context),
-        child: Text(product.name[0]),
-      ),
-      title: Text(
-        product.name,
-        style: _getTextStyle(context),
+    return Card(
+      margin: const EdgeInsets.symmetric(horizontal: 20, vertical: 9),
+      child: ListTile(
+        onTap: () => onCartChanged(product, inCart),
+        leading: CircleAvatar(
+          backgroundColor: _getColor(context),
+          foregroundColor: Colors.white,
+          child: Text(product.name[0].toUpperCase()),
+        ),
+        title: Text(
+          product.name,
+          style: _getTextStyle(context),
+        ),
+        trailing: Icon(
+          inCart ? Icons.check_box : Icons.check_box_outline_blank,
+          color: Theme.of(context).primaryColor,
+        ),
       ),
     );
   }
@@ -83,18 +83,34 @@ class _ShoppingListState extends State<ShoppingList> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Shopping List'),
+        title: const Text(
+          'Shopping List',
+          style: TextStyle(
+            color: Color.fromARGB(255, 42, 7, 48),
+            fontWeight: FontWeight.bold,
+          ),
+        ),
         backgroundColor: Theme.of(context).primaryColor,
       ),
-      body: ListView(
-        padding: const EdgeInsets.symmetric(vertical: 8),
-        children: widget.products.map((product) {
-          return ShoppingListItem(
-            product: product,
-            inCart: _shoppingCart.contains(product),
-            onCartChanged: _handleCartChanged,
-          );
-        }).toList(),
+      body: Container(
+        decoration: const BoxDecoration(
+          image: DecorationImage(
+            image: AssetImage('assets/images/shopping.png'),
+            fit: BoxFit.cover,
+          ),
+        ),
+        child: ListView.builder(
+          itemCount: widget.products.length,
+          padding: const EdgeInsets.symmetric(vertical: 8),
+          itemBuilder: (context, index) {
+            var product = widget.products[index];
+            return ShoppingListItem(
+              product: product,
+              inCart: _shoppingCart.contains(product),
+              onCartChanged: _handleCartChanged,
+            );
+          },
+        ),
       ),
     );
   }

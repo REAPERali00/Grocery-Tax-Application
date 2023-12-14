@@ -1,6 +1,7 @@
-# practice
+# Grocery Tax Applicaiton
 
-A new Flutter project.
+Tierd of not knowing how much your paying while doing your groceries cause stores refuse to include tax in the price?
+well worry no more! this app will help you include the tax in your prices with a push of a button.
 
 ## Getting Started
 

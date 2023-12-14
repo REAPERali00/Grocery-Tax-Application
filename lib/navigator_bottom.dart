@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:practice/grocery_page.dart';
 import 'package:practice/homepage.dart';
-import 'package:practice/shopping_list.dart';
 
 class MyHomePage extends StatefulWidget {
   @override
@@ -11,7 +10,7 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   int _selectedIndex = 0; // Current index of the selected item in the bar
   // Define the different screens
-  static List<Widget> _widgetOptions = <Widget>[
+  final List<Widget> _widgetOptions = <Widget>[
     const HomePage(),
     const Grocery(),
     // Add more screens here
@@ -43,8 +42,9 @@ class _MyHomePageState extends State<MyHomePage> {
 
           // Add more items here
         ],
+        backgroundColor: _selectedIndex % 2 == 0 ? Colors.green : Colors.purple,
         currentIndex: _selectedIndex,
-        selectedItemColor: Colors.amber[800],
+        selectedItemColor: Colors.limeAccent,
         onTap: _onItemTapped,
       ),
     );

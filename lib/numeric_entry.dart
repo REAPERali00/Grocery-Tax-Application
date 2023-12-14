@@ -31,7 +31,10 @@ class NumberInputState extends State<NumberInput> {
       decoration: const InputDecoration(
         border: OutlineInputBorder(),
         labelText: 'Enter the price: ',
+        labelStyle: TextStyle(color: Colors.white),
+        hintStyle: TextStyle(color: Colors.white),
       ),
+      style: const TextStyle(color: Colors.white),
       onSubmitted: submit,
     );
   }

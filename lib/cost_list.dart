@@ -17,7 +17,7 @@ class _CostListState extends State<CostList> {
       itemBuilder: (context, index) {
         var item = widget.items[index];
         return Card(
-          margin: const EdgeInsets.all(8.0),
+          margin: const EdgeInsets.all(10.0),
           elevation: 4.0,
           shadowColor: Colors.green,
           shape: RoundedRectangleBorder(
