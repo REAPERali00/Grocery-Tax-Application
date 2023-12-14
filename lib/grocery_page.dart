@@ -42,15 +42,17 @@ class GgroceryState extends State<Grocery> {
   }
 
   void _addNameDialog(BuildContext context) {
-    TextEditingController _textController = TextEditingController();
+    TextEditingController textController = TextEditingController();
+    FocusScope.of(context).autofocus;
     showDialog(
       context: context,
       builder: (context) {
         return AlertDialog(
-          title: const Text('Enter a name: '),
+          title: const Text('Enter the item\'s name: '),
           content: TextField(
-            controller: _textController,
-            decoration: const InputDecoration(hintText: "name"),
+            autofocus: true,
+            controller: textController,
+            decoration: const InputDecoration(hintText: "Item's name"),
           ),
           actions: <Widget>[
             TextButton(
@@ -60,8 +62,8 @@ class GgroceryState extends State<Grocery> {
             TextButton(
               child: const Text('Add'),
               onPressed: () {
-                if (_textController.text.isNotEmpty) {
-                  _addName(_textController.text);
+                if (textController.text.isNotEmpty) {
+                  _addName(textController.text);
                   Navigator.pop(context);
                 }
               },
@@ -83,12 +85,12 @@ class GgroceryState extends State<Grocery> {
         children: [
           SpeedDialChild(
             child: const Icon(Icons.add),
-            label: 'Add a name',
+            label: 'Add an item',
             onTap: () => _addNameDialog(context),
           ),
           SpeedDialChild(
             child: const Icon(Icons.clear),
-            label: 'Clear All names',
+            label: 'Clear All items',
             onTap: () => _clearNames(),
           ),
         ],

@@ -33,7 +33,7 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Grocerry'),
+        title: const Text('Grocery'),
         backgroundColor: Colors.green[300],
       ),
       body: Container(
@@ -54,9 +54,27 @@ class _HomePageState extends State<HomePage> {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Icon(Icons.attach_money, color: Colors.green[700]),
+                  RichText(
+                    text: TextSpan(
+                      children: [
+                        WidgetSpan(
+                            child: Padding(
+                          padding: const EdgeInsets.only(right: 4.0),
+                          child: Icon(Icons.attach_money,
+                              color: Colors.green[700]),
+                        )),
+                        TextSpan(
+                          text: 'Total',
+                          style: TextStyle(
+                              fontSize: 25,
+                              fontWeight: FontWeight.bold,
+                              color: Colors.green[700]),
+                        ),
+                      ],
+                    ),
+                  ),
                   Text(
-                    '${total_Cost.toStringAsFixed(2)}',
+                    total_Cost.toStringAsFixed(2),
                     style: TextStyle(
                         fontSize: 24,
                         fontWeight: FontWeight.bold,

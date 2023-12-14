@@ -17,9 +17,9 @@ class _CostListState extends State<CostList> {
       itemBuilder: (context, index) {
         var item = widget.items[index];
         return Card(
-          margin: const EdgeInsets.all(10.0),
+          margin: const EdgeInsets.symmetric(horizontal: 15, vertical: 9),
           elevation: 4.0,
-          shadowColor: Colors.green,
+          shadowColor: Colors.blue,
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(10.0),
           ),
@@ -28,7 +28,9 @@ class _CostListState extends State<CostList> {
             child: ListTile(
               leading: const Icon(Icons.shopping_cart, color: Colors.green),
               title: Text(
-                'Item ${index + 1}',
+                item.isTaxed
+                    ? 'Item ${index + 1}, Tax: ${item.tax * 100}%'
+                    : 'Item ${index + 1}',
                 style: const TextStyle(
                   fontSize: 18,
                   fontWeight: FontWeight.w500,
