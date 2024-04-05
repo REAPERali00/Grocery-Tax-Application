@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:practice/grocery_page.dart';
-import 'package:practice/homepage.dart';
+import 'package:practice/pages/grocery_page.dart';
+import 'package:practice/pages/homepage.dart';
 
 class MyHomePage extends StatefulWidget {
   @override

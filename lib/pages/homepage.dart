@@ -1,9 +1,9 @@
 // ignore_for_file: non_constant_identifier_names
 
 import 'package:flutter/material.dart';
-import 'package:practice/cost_list.dart';
-import 'package:practice/item.dart';
-import 'numeric_entry.dart';
+import 'package:practice/widgets/cost_list.dart';
+import 'package:practice/models/item.dart';
+import '../widgets/numeric_entry.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});

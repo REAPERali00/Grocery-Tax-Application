@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'item.dart';
+import '../models/item.dart';
 
 class CostList extends StatefulWidget {
   final List<Item> items;

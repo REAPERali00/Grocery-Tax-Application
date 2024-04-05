@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:practice/shopping_list.dart';
-import 'datastorage.dart';
+import 'package:practice/widgets/shopping_list.dart';
+import '../servieces/datastorage.dart';
 import 'package:flutter_speed_dial/flutter_speed_dial.dart';
 
 class Grocery extends StatefulWidget {

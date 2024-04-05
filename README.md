@@ -1,17 +1,71 @@
-# Grocery Tax Applicaiton
+# Grocery Calculator
 
-Tierd of not knowing how much your paying while doing your groceries cause stores refuse to include tax in the price?
-well worry no more! this app will help you include the tax in your prices with a push of a button.
+A brief description of what this project does and who it's for. Explain the problem your app solves or the value it adds to its intended users.
 
-## Getting Started
+## Features
 
-This project is a starting point for a Flutter application.
+- List the key features of your application.
+- Highlight what makes your app unique.
 
-A few resources to get you started if this is your first Flutter project:
+## Screenshots
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+Include a few screenshots of your app in action here. You can upload images to a service like imgur and link them here with Markdown:
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+![Home Screen](url-to-image)
+![Feature X Screen](url-to-image)
+
+## Installation
+
+Instructions on how to get a development environment running on your local machine.
+
+### Prerequisites
+
+List any prerequisites needed to run your project, including how to install them if necessary.
+
+```
+flutter --version
+```
+
+### Setup
+
+A step-by-step series of examples that tell you how to get a development environment running.
+
+```
+git clone https://yourproject/repository.git
+cd yourproject
+flutter pub get
+```
+
+### Running the App
+
+Explain how to run the application, including any additional steps needed to enjoy all its features.
+
+```
+flutter run
+```
+
+## Usage
+
+Provide examples or a demo of how to use your project, highlighting the main functionalities.
+
+```dart
+// Example usage code
+```
+
+## Testing
+
+Describe how to run the automated tests for this system.
+
+```
+flutter test
+```
+
+## Deployment
+
+Add additional notes about how to deploy this on a live system, if applicable.
+
+## Built With
+
+- [Flutter](https://flutter.dev/) - The UI toolkit used
+- [Dart](https://dart.dev/) - Programming language
+- Mention any other libraries or APIs your project depends on.
