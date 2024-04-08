@@ -21,7 +21,7 @@ Now, managing your grocery expenses is straightforward, with no steep learning c
 
 Include a few screenshots of your app in action here. You can upload images to a service like imgur and link them here with Markdown:
 
-![Demo](https://github.com/REAPERali00/Grocery-Tax-Application/assets/120317445/77a9f9f7-3e04-4106-bf37-0915bb8d41bc)
+https://github.com/REAPERali00/Grocery-Tax-Application/assets/120317445/77a9f9f7-3e04-4106-bf37-0915bb8d41bc
 
 ### Prerequisites
 
