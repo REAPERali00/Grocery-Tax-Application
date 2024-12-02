@@ -8,28 +8,31 @@ Now, managing your grocery expenses is straightforward, with no steep learning c
 
 ## Features
 
-- Grocery Items Listing
-- Tax Calculation, with easy to modify settings 
-- Grocery list
-- Clear Grocery page 
-- Check box Item to enable tax
-- Item's with tax have descriptions
-- Add item to Grocery list  
-- Local Storage for Grocery list
-  
+- [x] Grocery Items Listing
+- [x] Tax Calculation, with easy to modify settings
+- [x] Grocery list
+- [x] Clear Grocery page
+- [x] Check box Item to enable tax
+- [x] Item's with tax have descriptions
+- [x] Add item to Grocery list
+- [x] Local Storage for Grocery list
+- [ ] settings page to modify information such as tax percentage
+- [ ] Image analysis to add price
+- [ ] Import from notes or scan to add to grocery list
+
 ## Demonstration
 
 Include a few screenshots of your app in action here. You can upload images to a service like imgur and link them here with Markdown:
 
-https://github.com/REAPERali00/Grocery-Tax-Application/assets/120317445/77a9f9f7-3e04-4106-bf37-0915bb8d41bc
+<https://github.com/REAPERali00/Grocery-Tax-Application/assets/120317445/77a9f9f7-3e04-4106-bf37-0915bb8d41bc>
 
 ### Prerequisites
 
-Make sure to install Flutter in advance. to check if you have flutter installed: 
+Make sure to install Flutter in advance. to check if you have flutter installed:
 
 ```
 flutter --version
-flutter doctor 
+flutter doctor
 ```
 
 ### Setup
